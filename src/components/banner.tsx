@@ -3,41 +3,46 @@ import Image from "next/image";
 
 const Banner = () => {
    return (
-      <div className="flex flex-col lg:flex-row mx-4 lg:mx-24">
-         <div className="w-full lg:w-1/2">
+      <div className="flex flex-col xl:flex-row mx-4 sm:mx-8 lg:mx-16 xl:mx-32 2xl:mx-40 my-12 xl:my-24">
+         <div className="w-full xl:w-1/2 relative aspect-square">
             <Image
                src={"/images/fashion-5.png"}
-               width={900}
-               height={900}
                alt="Fashion banner image"
-               layout="responsive"
+               layout="fill"
+               objectFit="cover"
+               priority
             />
          </div>
-         <div className="w-full lg:w-1/2 bg-[#FAE157] py-8 lg:py-24 flex flex-col gap-6 lg:gap-12">
-            <div className="font-poppins mx-4 lg:mx-8">
-               <span className="relative inline-block left-4 lg:left-9">
-                  <span className="relative z-10 bg-yellow-300 text-4xl lg:text-9xl font-black">
-                     PAY DAY
+
+         <div className="w-full xl:w-1/2 bg-[#FAE157] flex flex-col justify-center">
+            <div className="py-8 sm:py-12 lg:py-16 xl:py-24 px-4 sm:px-6 lg:px-8 xl:px-10">
+               <div className="font-poppins">
+                  <span className="relative inline-block left-2 sm:left-3 lg:left-4 xl:left-5">
+                     <span className="relative z-10 bg-yellow-300 text-3xl sm:text-4xl lg:text-6xl xl:text-8xl font-black">
+                        PAY DAY
+                     </span>
                   </span>
-                  <span className="absolute -inset-x-0 sm:-inset-x-2 inset-y-0 bg-white -rotate-2 z-0"></span>
-               </span>
-               <h1 className="font-extrabold text-5xl lg:text-9xl leading-tight lg:leading-[137px]">
-                  SALE NOW
-               </h1>
-            </div>
-            <div className="mx-4 lg:mx-8 flex flex-col gap-6 lg:gap-12">
-               <p className="text-2xl lg:text-4xl font-medium">
-                  Spend minimal $100 get 30% off voucher code for your next purchase
-               </p>
-               <div className="">
-                  <p className="text-2xl lg:text-4xl font-bold">1 June - 10 June 2021</p>
-                  <p className="text-xl lg:text-4xl font-normal">
-                     *Terms & Conditions apply
-                  </p>
+                  <h1 className="font-extrabold text-4xl sm:text-5xl lg:text-7xl xl:text-8xl leading-tight sm:leading-[70px] lg:leading-[90px] xl:leading-[120px]">
+                     SALE NOW
+                  </h1>
                </div>
-               <button className="bg-black text-white p-4 lg:p-6 px-6 lg:px-8 text-xl lg:text-3xl rounded-lg font-semibold w-full lg:w-1/3 hover:bg-gray-900 transition-colors ease-in">
-                  Shop Now
-               </button>
+               <div className="mt-6 sm:mt-8 lg:mt-10 xl:mt-12 flex flex-col gap-4 sm:gap-6 lg:gap-8 xl:gap-10">
+                  <p className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-medium">
+                     Spend minimal $100 get 30% off voucher code for your next
+                     purchase
+                  </p>
+                  <div>
+                     <p className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold">
+                        1 June - 10 June 2021
+                     </p>
+                     <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-normal">
+                        *Terms & Conditions apply
+                     </p>
+                  </div>
+                  <button className="bg-black text-white py-4 px-8 text-xl sm:text-2xl lg:text-3xl xl:text-4xl rounded-lg font-semibold w-full sm:w-auto hover:bg-gray-900 transition-colors ease-in">
+                     Shop Now
+                  </button>
+               </div>
             </div>
          </div>
       </div>
