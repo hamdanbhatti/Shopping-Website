@@ -13,7 +13,7 @@ const Banner = () => {
                priority
             />
          </div>
-
+         
          <div className="w-full xl:w-1/2 bg-[#FAE157] flex flex-col justify-center">
             <div className="py-8 sm:py-12 lg:py-16 xl:py-24 px-4 sm:px-6 lg:px-8 xl:px-10">
                <div className="font-poppins">
